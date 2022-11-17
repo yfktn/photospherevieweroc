@@ -1,0 +1,36 @@
+<div id="refreshViewerHolder">
+  <a id="fixingViewerBtn" href="#" class="btn btn-primary btn-block" 
+    onclick="fixingViewer(event)">Fixing Panorama Viewer</a>
+  <div id="viewer" style="width:100%;height:350px;">
+
+  <script type="text/template" id="descriptionContainer">
+  <?= $description ?>
+  <div id="themap">
+    <?= $embedded_map ?>
+  </div>
+  </script>
+
+  <script>
+  let viewer = new PhotoSphereViewer.Viewer({
+    container: document.querySelector('#viewer'),
+    panorama: '<?= $panoramaImage ?>',
+    caption: '<?= $caption ?>',
+    description: document.querySelector('#descriptionContainer').innerHTML,
+    touchmoveTwoFingers: true,
+    mousewheelCtrlKey: true,
+  });
+  viewer.once('ready', function() {
+    document.querySelector('.psv-description-button').onclick = function() {
+      let iframeMap = document.querySelector("#themap iframe");
+      if(iframeMap != null) {
+        iframeMap.width = "100%";
+      }
+    }
+  });
+  function fixingViewer(elem) {
+    viewer.resize();
+    event.preventDefault();
+    document.getElementById('fixingViewerBtn').style.display = 'none';
+  }
+  </script>
+</div>

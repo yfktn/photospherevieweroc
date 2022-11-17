@@ -1,0 +1,42 @@
+fields:
+    caption:
+        label: Caption
+        span: full
+        type: text
+    is_shown:
+        label: 'Is shown'
+        span: auto
+        type: switch
+tabs:
+    fields:
+        panorama:
+            label: Panorama
+            mode: image
+            useCaption: 0
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: auto
+            type: fileupload
+            comment: 'Choose yours panorama picture.'
+            tab: 'Panorama & Map'
+        embedded_map:
+            label: 'Embed a Map'
+            span: auto
+            attributes:
+                maxlength: '4500'
+            type: text
+            comment: 'Paste your embedded map code in here.'
+            tab: 'Panorama & Map'
+        description:
+            label: ''
+            size: small
+            span: full
+            type: richeditor
+            tab: Description
+        partial1:
+            label: ''
+            span: full
+            path: $/yfktn/photospherevieweroc/controllers/photosphereviewer/_render_viewer.htm
+            type: partial
+            tab: Viewer

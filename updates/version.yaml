@@ -1,0 +1,10 @@
+1.0.1: 'First version of photosphereViewerOc'
+1.0.2:
+    - 'Created table yfktn_photospherevieweroc_'
+    - builder_table_create_yfktn_photospherevieweroc_.php
+1.0.3:
+    - 'Add description'
+    - builder_table_update_yfktn_photospherevieweroc_.php
+1.0.4:
+    - 'add field to save embedded map from goggle or other source!'
+    - builder_table_update_yfktn_photospherevieweroc__2.php

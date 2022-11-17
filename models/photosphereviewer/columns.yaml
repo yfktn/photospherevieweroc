@@ -1,0 +1,12 @@
+columns:
+    caption:
+        label: caption
+        type: text
+        searchable: true
+    is_shown:
+        label: is_shown
+        type: switch
+    slug:
+        label: slug
+        type: text
+        searchable: true

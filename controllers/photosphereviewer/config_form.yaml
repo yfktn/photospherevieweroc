@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Photo Spehere Viewer
+
+# Model Form Field configuration
+form: $/yfktn/photospherevieweroc/models/photosphereviewer/fields.yaml
+
+# Model Class name
+modelClass: Yfktn\PhotoSphereViewerOc\Models\photosphereViewer
+
+# Default redirect location
+defaultRedirect: yfktn/photospherevieweroc/photosphereviewer
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: yfktn/photospherevieweroc/photosphereviewer/update/:id
+    redirectClose: yfktn/photospherevieweroc/photosphereviewer
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: yfktn/photospherevieweroc/photosphereviewer
+    redirectClose: yfktn/photospherevieweroc/photosphereviewer
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title
