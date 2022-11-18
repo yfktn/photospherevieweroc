@@ -3,7 +3,7 @@
 # ===================================
 
 # Record name
-name: Photo Spehere Viewer
+name: Photo Sphere Viewer
 
 # Model Form Field configuration
 form: $/yfktn/photospherevieweroc/models/photosphereviewer/fields.yaml

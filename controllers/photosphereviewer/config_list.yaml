@@ -9,7 +9,7 @@ list: $/yfktn/photospherevieweroc/models/photosphereviewer/columns.yaml
 modelClass: Yfktn\PhotoSphereViewerOc\Models\photosphereViewer
 
 # List Title
-title: Manage Photo Spehere Viewers
+title: Manage Photo Sphere Viewers
 
 # Link URL for each record
 recordUrl: yfktn/photospherevieweroc/photosphereviewer/update/:id

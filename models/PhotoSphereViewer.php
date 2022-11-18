@@ -36,12 +36,4 @@ class PhotoSphereViewer extends Model
     {
         return $query->where('is_shown', 1);
     }
-
-    public function beforeSave()
-    {
-        if($this->isDirty('embedded_map')) {
-            // we need to manually change the value of width
-            
-        }
-    }
 }
