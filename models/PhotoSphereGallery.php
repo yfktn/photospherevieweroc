@@ -6,43 +6,38 @@ use October\Rain\Database\Traits\Sluggable;
 /**
  * Model
  */
-class PhotoSphereViewer extends Model
+class PhotoSphereGallery extends Model
 {
     use \October\Rain\Database\Traits\Validation;
     use Sluggable;
 
     protected $slugs = [
-        'slug' => 'caption'
+        'slug' => 'title',
     ];
-
+    
 
     /**
      * @var string The database table used by the model.
      */
-    public $table = 'yfktn_photospherevieweroc_';
+    public $table = 'yfktn_photospherevieweroc_gallery';
 
     /**
      * @var array Validation rules
      */
     public $rules = [
-        'caption' => 'required'
+        'title' => 'required'
     ];
-    
+
     public $attachOne = [
-        'panorama' => [ 'System\Models\File' ]
+        'header' => [ 'System\Models\File' ]
     ];
 
     public $belongsToMany = [
-        'galleries' => [
-            PhotoSphereGallery::class,
+        'items' => [
+            PhotoSphereViewer::class,
             'table' => 'yfktn_photospherevieweroc_gallery_item',
-            'key' => 'item_id',
-            'otherKey' => 'gallery_id'
+            'key' => 'gallery_id',
+            'otherKey' => 'item_id'
         ]
     ];
-
-    public function scopeShown($query)
-    {
-        return $query->where('is_shown', 1);
-    }
 }

@@ -32,7 +32,7 @@ class PhotoSphereViewer extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Yfktn.photosphereViewerOc', 'photospherevieweroc', 'photosphereviewer');
+        BackendMenu::setContext('Yfktn.photosphereViewerOc', 'photospherevieweroc', 'psvitem');
 
         $photoSpehereViewerWidget = new WidgetsphotosphereViewer($this);
         $photoSpehereViewerWidget->alias = 'photoSpehereViewerWidget';

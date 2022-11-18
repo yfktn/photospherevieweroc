@@ -1,0 +1,9 @@
+items:
+  label: Gallery Items
+  view:
+    list: $/yfktn/photospherevieweroc/models/photosphereviewer/columns.yaml
+    toolbarButtons: add|remove
+  manage:
+    list: $/yfktn/photospherevieweroc/models/photosphereviewer/columns.yaml
+    showSearch: true
+    #form: $/yfktn/photospherevieweroc/models/photosphereviewer/columns.yaml

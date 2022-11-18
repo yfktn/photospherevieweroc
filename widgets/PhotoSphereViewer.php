@@ -24,16 +24,16 @@ class PhotoSphereViewer extends WidgetBase
 
     protected function loadAssets()
     {
-        $this->addCss('/plugins/yfktn/photospherevieweroc/widgets/photosphereviewer/assets/photo-sphere-viewer.min.css');
-        $this->addJs('/plugins/yfktn/photospherevieweroc/widgets/photosphereviewer/assets/three.min.js');
-        $this->addJs('/plugins/yfktn/photospherevieweroc/widgets/photosphereviewer/assets/browser.min.js');
-        $this->addJs('/plugins/yfktn/photospherevieweroc/widgets/photosphereviewer/assets/photo-sphere-viewer.min.js');
+        $this->addCss('/plugins/yfktn/photospherevieweroc/assets/photo-sphere-viewer.min.css');
+        $this->addJs('/plugins/yfktn/photospherevieweroc/assets/three.min.js');
+        $this->addJs('/plugins/yfktn/photospherevieweroc/assets/browser.min.js');
+        $this->addJs('/plugins/yfktn/photospherevieweroc/assets/photo-sphere-viewer.min.js');
     }
 
     protected function getPanoramaImage()
     {
         if($this->modelOwnerObject == null) {
-            return '/plugins/yfktn/photospherevieweroc/widgets/assets/init.jpg';
+            return '/plugins/yfktn/photospherevieweroc/assets/init.jpg';
         }
         return $this->modelOwnerObject->panorama->getPath();
     }

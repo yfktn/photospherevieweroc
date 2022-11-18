@@ -18,7 +18,7 @@ tabs:
                 extension: auto
             span: auto
             type: fileupload
-            comment: 'Choose yours panorama picture.'
+            comment: 'Upload yours panorama picture.'
             tab: 'Panorama & Map'
         embedded_map:
             label: 'Embed a Map'
@@ -30,7 +30,7 @@ tabs:
             tab: 'Panorama & Map'
         description:
             label: ''
-            size: small
+            size: large
             span: full
             type: richeditor
             tab: Description
@@ -38,5 +38,8 @@ tabs:
             label: ''
             span: full
             path: $/yfktn/photospherevieweroc/controllers/photosphereviewer/_render_viewer.htm
+            context:
+                - update
+                - preview
             type: partial
             tab: Viewer

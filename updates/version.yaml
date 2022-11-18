@@ -8,3 +8,9 @@
 1.0.4:
     - 'add field to save embedded map from goggle or other source!'
     - builder_table_update_yfktn_photospherevieweroc__2.php
+1.0.5:
+    - 'Created table yfktn_photospherevieweroc_gallery'
+    - builder_table_create_yfktn_photospherevieweroc_gallery.php
+1.0.6:
+    - 'Created table yfktn_photospherevieweroc_gallery_item'
+    - builder_table_create_yfktn_photospherevieweroc_gallery_item.php

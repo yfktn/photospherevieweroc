@@ -82,10 +82,25 @@ class Plugin extends PluginBase
         return [
             'photospherevieweroc' => [
                 'label'       => 'PhotoSphereViewer',
-                'url'         => Backend::url('yfktn/photospherevieweroc/photosphereviewer'),
+                'url'         => Backend::url('yfktn/photospherevieweroc/photospheregallery'),
                 'icon'        => 'icon-leaf',
                 'permissions' => ['yfktn.photospherevieweroc.*'],
                 'order'       => 500,
+
+                'sideMenu' => [
+                    'psvgallery' => [
+                        'label' => 'Gallery',
+                        'icon' => 'icon-list-ul',
+                        'url' => Backend::url('yfktn/photospherevieweroc/photospheregallery'),
+                        'permissions' => ['yfktn.photospherevieweroc.editor'],
+                    ],
+                    'psvitem' => [
+                        'label' => 'Item',
+                        'icon' => 'icon-map',
+                        'url' => Backend::url('yfktn/photospherevieweroc/photosphereviewer'),
+                        'permissions' => ['yfktn.photospherevieweroc.editor'],
+                    ],
+                ]
             ],
         ];
     }

@@ -1,0 +1,23 @@
+columns:
+    title:
+        label: Title
+        type: text
+    description:
+        label: Description
+        type: text
+        invisible: true
+    slug:
+        label: Slug
+        type: text
+    created_at:
+        label: Created At
+        type: datetime
+        invisible: true
+    updated_at:
+        label: Updated At
+        type: datetime
+        invisible: true
+    is_shown:
+        label: is_shown
+        type: text
+        invisible: true

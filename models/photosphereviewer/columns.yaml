@@ -1,12 +1,19 @@
 columns:
     caption:
-        label: caption
+        label: Caption
         type: text
         searchable: true
     is_shown:
-        label: is_shown
+        label: Is Shown?
         type: switch
     slug:
-        label: slug
+        label: Slug
         type: text
         searchable: true
+    created_at:
+        label: Created At
+        invisible: true
+    updated_at:
+        label: Updated At
+        invisible: true
+

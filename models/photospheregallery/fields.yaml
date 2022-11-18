@@ -1,0 +1,36 @@
+fields:
+    title:
+        label: Title
+        span: full
+        type: text
+    is_shown:
+        label: 'Is shown?'
+        comment: 'Turn it on when you are ready to make your gallery public.'
+        default: 0
+        span: auto
+        type: switch
+tabs:
+    fields:
+        items:
+            #label: Gallery Items
+            type: partial
+            path: $/yfktn/photospherevieweroc/controllers/photospheregallery/_load_items_relation.htm
+            span: full
+            tab: Gallery Item
+        header:
+            # label: Panorama
+            mode: image
+            useCaption: 0
+            thumbOptions:
+                mode: crop
+                extension: auto
+            span: full
+            type: fileupload
+            comment: 'Upload yours header picture.'
+            tab: 'Header'
+        description:
+            #label: Description
+            size: large
+            span: full
+            type: richeditor
+            tab: Description
