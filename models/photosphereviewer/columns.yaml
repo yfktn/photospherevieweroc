@@ -1,4 +1,9 @@
 columns:
+    panorama:
+        label: Panorama
+        type: partial
+        sortable: false
+        path: $/yfktn/photospherevieweroc/models/photosphereviewer/_render_panorama.htm
     caption:
         label: Caption
         type: text

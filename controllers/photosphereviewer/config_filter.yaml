@@ -1,0 +1,7 @@
+scopes:
+  is_show:
+    label: Published To Public?
+    type: switch
+    conditions:
+      - is_shown <> true
+      - is_shown = true
