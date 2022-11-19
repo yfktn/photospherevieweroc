@@ -17,7 +17,7 @@ tabs:
             path: $/yfktn/photospherevieweroc/controllers/photospheregallery/_load_items_relation.htm
             span: full
             tab: Gallery Item
-        header:
+        header_image:
             # label: Panorama
             mode: image
             useCaption: 0

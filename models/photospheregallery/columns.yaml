@@ -1,7 +1,15 @@
 columns:
+    header_image:
+        label: Header Image
+        type: partial
+        sortable: false
+        path: $/yfktn/photospherevieweroc/models/photospheregallery/_render_header.htm
     title:
         label: Title
         type: text
+    is_shown:
+        label: Is Shown?
+        type: switch
     description:
         label: Description
         type: text
@@ -16,8 +24,4 @@ columns:
     updated_at:
         label: Updated At
         type: datetime
-        invisible: true
-    is_shown:
-        label: is_shown
-        type: text
         invisible: true

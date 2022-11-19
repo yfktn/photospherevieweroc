@@ -29,7 +29,7 @@ class PhotoSphereGallery extends Model
     ];
 
     public $attachOne = [
-        'header' => [ 'System\Models\File' ]
+        'header_image' => [ 'System\Models\File' ]
     ];
 
     public $belongsToMany = [
