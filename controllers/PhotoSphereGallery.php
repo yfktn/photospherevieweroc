@@ -33,6 +33,6 @@ class PhotoSphereGallery extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Yfktn.PhotoSphereViewerOc', 'photospherevieweroc', 'psvgallery');
+        BackendMenu::setContext('Yfktn.PhotoSphereViewerOc', 'photospherevieweroc',  'psvgallery');
     }
 }

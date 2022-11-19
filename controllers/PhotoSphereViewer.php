@@ -32,11 +32,11 @@ class PhotoSphereViewer extends Controller
     {
         parent::__construct();
 
-        BackendMenu::setContext('Yfktn.photosphereViewerOc', 'photospherevieweroc', 'psvitem');
-
         $photoSpehereViewerWidget = new WidgetsphotosphereViewer($this);
         $photoSpehereViewerWidget->alias = 'photoSpehereViewerWidget';
         $photoSpehereViewerWidget->bindToController();
+
+        BackendMenu::setContext('Yfktn.PhotoSphereViewerOc', 'photospherevieweroc',  'psvitem');
     }
 
     public function update($recordId, $context = null)

@@ -83,7 +83,7 @@ class Plugin extends PluginBase
             'photospherevieweroc' => [
                 'label'       => 'PhotoSphereViewer',
                 'url'         => Backend::url('yfktn/photospherevieweroc/photospheregallery'),
-                'icon'        => 'icon-leaf',
+                'icon'        => 'icon-laptop',
                 'permissions' => ['yfktn.photospherevieweroc.*'],
                 'order'       => 500,
 
