@@ -52,6 +52,7 @@ class Plugin extends PluginBase
     {
         return [
             'Yfktn\PhotoSphereViewerOc\Components\GalleryViewer' => 'galleryViewer',
+            'Yfktn\PhotoSphereViewerOc\Components\GalleryItemViewer' => 'galleryItemViewer',
         ];
     }
 

@@ -20,21 +20,24 @@ class GalleryViewer extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'galleryItemPage' => [
+                'title' => 'Gallery Item Page',
+                'description' => 'Page to show selected virtual gallery item.',
+                'type' => 'dropdown',
+                'default' => 'photo-sphere-viewer/detail'
+            ],];
     }
 
-    protected function loadAssets()
+    public function getGalleryItemPageOptions()
     {
-        $this->addCss('/plugins/yfktn/photospherevieweroc/assets/photo-sphere-viewer.min.css');
-        $this->addJs('/plugins/yfktn/photospherevieweroc/assets/three.min.js');
-        $this->addJs('/plugins/yfktn/photospherevieweroc/assets/browser.min.js');
-        $this->addJs('/plugins/yfktn/photospherevieweroc/assets/photo-sphere-viewer.min.js');
+        return \Cms\Classes\Page::sortBy('baseFileName')->lists('baseFileName', 'baseFileName');
     }
 
     public function onRun()
     {
-        $this->loadAssets();
         $this->dataViewer['theGallery'] = PhotoSphereGallery::with(['header_image', 'items'])
             ->shown()->orderBy('created_at', 'desc')->get();
+        $this->dataViewer['galleryItemPage'] = $this->property('galleryItemPage');
     }
 }

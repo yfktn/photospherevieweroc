@@ -1,7 +1,7 @@
 {% set dataViewer = __SELF__.dataViewer %}
 
 {% for gallery in dataViewer['theGallery'] %}
-    <a href="#">
+    <a href="{{ dataViewer['galleryItemPage'] | page({slug: gallery.slug}) }}">
         <figure class="figure">
             <img src="{{ gallery.header_image | resize(400, 300) }}" 
                 class="figure-img img-fluid rounded" 

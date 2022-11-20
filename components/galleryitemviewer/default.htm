@@ -1,0 +1,57 @@
+{% set galleryItemViewer = __SELF__.galleryItemViewer %}
+
+<div id="viewer" style="width:100%;min-height:60vh;">
+{% put scripts %}
+  {% for galleryItem in galleryItemViewer['gallery'].items %}
+    <script type="text/template" id='descriptionContainerId{{ galleryItem.id }}'>
+      {{ galleryItem.description|raw }}
+      <div id="themap">
+          {{ galleryItem.embedded_map|raw }}
+      </div>
+    </script>
+  {% endfor %}
+
+  <script>
+  const viewer = new PhotoSphereViewer.Viewer({
+    container: 'viewer',
+    panorama: "{{ galleryItemViewer['firstPanorama'][0] | raw }}",
+    caption: "{{ galleryItemViewer['firstPanorama'][1] | raw }}",
+    {% if galleryItemViewer['firstPanorama'][2] > 0 %}
+      description: document.querySelector("#descriptionContainerId{{ galleryItemViewer['firstPanorama'][2] }}").innerHTML,
+    {% endif %}
+    touchmoveTwoFingers: true,
+    mousewheelCtrlKey: true,
+
+    plugins: [
+      [PhotoSphereViewer.GalleryPlugin, {
+        visibleOnLoad: true,
+      }],
+    ],
+  });
+
+  const gallery = viewer.getPlugin(PhotoSphereViewer.GalleryPlugin);
+
+  gallery.setItems([
+      {% for galleryItem in galleryItemViewer['gallery'].items %}
+      {
+          id       : 'id-{{ galleryItem.id }}',
+          panorama : "{{ galleryItem.panorama.path }}",
+          thumbnail: "{{ galleryItem.panorama.path | resize(100, 75) }}",
+          name     : 'Gallery Id #{{ galleryItem.id }}',
+          options  : {
+              caption: "{{ galleryItem.caption }}",
+              description: document.querySelector('#descriptionContainerId{{ galleryItem.id }}').innerHTML,
+          },
+      },
+      {% endfor %}
+  ]);
+  viewer.once('ready', function() {
+      document.querySelector('.psv-description-button').onclick = function() {
+          let iframeMap = document.querySelector("#themap iframe");
+          if(iframeMap != null) {
+          iframeMap.width = "100%";
+          }
+      }
+  });
+  </script>
+{% endput %}
