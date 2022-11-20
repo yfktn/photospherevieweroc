@@ -50,10 +50,8 @@ class Plugin extends PluginBase
      */
     public function registerComponents()
     {
-        return []; // Remove this line to activate
-
         return [
-            'Yfktn\PhotoSphereViewerOc\Components\MyComponent' => 'myComponent',
+            'Yfktn\PhotoSphereViewerOc\Components\GalleryViewer' => 'galleryViewer',
         ];
     }
 

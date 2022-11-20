@@ -40,4 +40,9 @@ class PhotoSphereGallery extends Model
             'otherKey' => 'item_id'
         ]
     ];
+
+    public function scopeShown($query)
+    {
+        return $query->where('is_shown', 1);
+    }
 }

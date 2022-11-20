@@ -1,20 +1,20 @@
 <?php namespace Yfktn\PhotoSphereViewerOc\Components;
 
 use Cms\Classes\ComponentBase;
-use Yfktn\PhotoSphereViewerOc\Models\PhotoSphereViewer;
+use Yfktn\PhotoSphereViewerOc\Models\PhotoSphereGallery;
 
 /**
- * TheViewerAll Component
+ * GalleryViewer Component
  */
-class TheViewerAll extends ComponentBase
+class GalleryViewer extends ComponentBase
 {
     public $dataViewer = [];
 
     public function componentDetails()
     {
         return [
-            'name' => 'TheViewerAll Component',
-            'description' => 'Load Photo Sphere'
+            'name' => 'GalleryViewer Component',
+            'description' => 'Load Gallery Photo Sphere'
         ];
     }
 
@@ -34,7 +34,7 @@ class TheViewerAll extends ComponentBase
     public function onRun()
     {
         $this->loadAssets();
-        $panoramaObjects = PhotoSphereViewer::shown()->all();
-
+        $this->dataViewer['theGallery'] = PhotoSphereGallery::with(['header_image', 'items'])
+            ->shown()->orderBy('created_at', 'desc')->get();
     }
 }

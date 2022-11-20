@@ -1,0 +1,12 @@
+{% set dataViewer = __SELF__.dataViewer %}
+
+{% for gallery in dataViewer['theGallery'] %}
+    <a href="#">
+        <figure class="figure">
+            <img src="{{ gallery.header_image | resize(400, 300) }}" 
+                class="figure-img img-fluid rounded" 
+                alt="{{ gallery.title }}">
+            <figcaption class="figure-caption">{{ gallery.title }}</figcaption>
+        </figure>
+    </a>
+{% endfor %}
