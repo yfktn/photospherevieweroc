@@ -25,7 +25,8 @@ class PhotoSphereViewer extends Model
      * @var array Validation rules
      */
     public $rules = [
-        'caption' => 'required'
+        'caption' => 'required',
+        'panorama' => 'required'
     ];
     
     public $attachOne = [
