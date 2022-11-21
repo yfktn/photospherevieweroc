@@ -37,7 +37,7 @@
           id       : 'id-{{ galleryItem.id }}',
           panorama : "{{ galleryItem.panorama.path }}",
           thumbnail: "{{ galleryItem.panorama.path | resize(100, 75) }}",
-          name     : 'Gallery Id #{{ galleryItem.id }}',
+          name     : '{{ galleryItem.caption}}',
           options  : {
               caption: "{{ galleryItem.caption }}",
               description: document.querySelector('#descriptionContainerId{{ galleryItem.id }}').innerHTML,
